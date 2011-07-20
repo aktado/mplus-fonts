@@ -2,7 +2,7 @@ TESTFLIGHT_VER= 041
 
 RELEASE=	mplus-TESTFLIGHT-${TESTFLIGHT_VER}
 
-FILES=	LICENSE_E LICENSE_J README_E README_J m++ipa.pe
+FILES=	LICENSE_E LICENSE_J README_E README_J VERSION m++ipa.pe
 
 FONTS=	../work.d/targets/mplus-1p/black/mplus-1p-black.ttf \
 	../work.d/targets/mplus-1p/heavy/mplus-1p-heavy.ttf \
@@ -53,12 +53,21 @@ FONTS=	../work.d/targets/mplus-1p/black/mplus-1p-black.ttf \
 #	../work.d/targets/mplus-2mn/light/mplus-2mn-light.ttf \
 #	../work.d/targets/mplus-2mn/thin/mplus-2mn-thin.ttf
 
-release: 
+release: VERSION
 	mkdir -p ${RELEASE}
 	cp -p $(FILES) ${RELEASE}
 	cp -p $(FONTS) ${RELEASE}
 	tar cvfz ${RELEASE}.tar.gz ${RELEASE}/
 	rm -rf ${RELEASE}
 
+VERSION:
+	echo "${RELEASE}" `date +%Y%m%d%H%M` >| $@;
+	echo "" >> $@;
+	fontforge -version >>$@ 2>/dev/null;
+
 clean:
 	rm -rf ${RELEASE} ${RELEASE}.tar.gz
+	rm -f VERSION
+
+.PHONY: release VERSION clean
+
