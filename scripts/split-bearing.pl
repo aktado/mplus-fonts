@@ -12,7 +12,7 @@
 $weight = shift;
 
 @ARGV = grep { -e $_ } map { $_ = "../../../../svg.d/$_/bearings" } @ARGV;
-die "No module specified:" if (scalar @ARGV == 0);
+exit 0 if (scalar @ARGV == 0);
 
 %weight_columns = ( 'black' => 0, 'heavy' => 2, 'bold' => 4, 'medium' => 6, 
 		    'regular' => 8, 'light' => 10, 'thin' => 12);
@@ -49,7 +49,8 @@ foreach $arg (@ARGV) {
 	    
 	$ch = $names_subst{$ch} if defined $names_subst{$ch};
 	print "Select(\"$ch\")\n";
-	$bearings[$L] += $dLSB;  $bearings[$R] += $dRSB;
+	$bearings[$L] += $dLSB if not $l_is_relative;
+	$bearings[$R] += $dRSB if not ($r_is_relative or $r_is_width);
 	print "SetLBearing($bearings[$L], $l_is_relative)\n";
 	if ($r_is_width) {
 	    print "SetWidth($bearings[$R], $r_is_relative)\n";
