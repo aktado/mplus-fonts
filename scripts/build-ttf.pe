@@ -9,6 +9,8 @@ digit = ["0","1","2","3","4","5","6","7","8","9"]
 
 # create font
 Open("mplus.sfd")
+Reencode("unicode4")
+ScaleToEm(860, 140)
 
 _weight = Strsub($1:r, Strrstr($1:r,"-")+1)
 _ttfname = $1
