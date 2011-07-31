@@ -51,9 +51,10 @@ endif
 mod++; endloop
 
 SelectWorthOutputting()
-ClearInstrs()
-UnlinkReference()
-RoundToInt(); RemoveOverlap(); RoundToInt()
+#ClearInstrs()
+#UnlinkReference()
+RemoveOverlap()
+RoundToInt()
 
 set_fontnames()
 if ( modules[0] != "kanji" )
@@ -68,3 +69,4 @@ endif
 Generate(_ttfname, "", 0x80)
 
 Quit()
+
