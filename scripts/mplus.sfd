@@ -3,7 +3,7 @@ FontName: mplus
 FullName: M+
 FamilyName: mplus
 Weight: regular
-Copyright: Copyright (c) 2002-2011 M+ FONTS PROJECT.
+Copyright: Copyright (c) 2002 M+ FONTS PROJECT.
 UComments: "M+- Fonts." 
 Version: 001.000
 ItalicAngle: 0
@@ -31,7 +31,7 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
-OS2Vendor: 'PfEd'
+OS2Vendor: 'M+  '
 DEI: 91125
 Encoding: UnicodeFull
 UnicodeInterp: none
