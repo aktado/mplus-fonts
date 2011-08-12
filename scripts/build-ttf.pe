@@ -52,12 +52,6 @@ endif
     endif
 mod++; endloop
 
-SelectWorthOutputting()
-#ClearInstrs()
-#UnlinkReference()
-RemoveOverlap()
-RoundToInt()
-
 set_fontnames()
 if ( modules[0] != "kanji" )
 	set_bearings()
@@ -66,9 +60,12 @@ if ( modules[0] != "kanji" )
 	set_ligatures()
 	set_ccmp()
 	set_instructions()
+	SelectWorthOutputting()
+	RemoveOverlap()
+	RoundToInt()
 endif
 
-Generate(_ttfname, "", 0x80)
+Generate(_ttfname, "", 0x84)
 
 Quit()
 
