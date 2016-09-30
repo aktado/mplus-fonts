@@ -5,7 +5,7 @@ author = "M+ FONTS PROJECT"
 os2_vendor = "M+  "
 url = "http://mplus-fonts.osdn.jp"
 year = "2016"
-version = "1.061"
+version = "1.062"
 
 license = {
   'Japanese': '''\
