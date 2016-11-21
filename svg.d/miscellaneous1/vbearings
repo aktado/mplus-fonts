@@ -14,9 +14,6 @@ uni2196        R
 uni2197        R
 uni2198        R
 uni2199        R
-################# Mathematical Operators
-uni2225        R
-uni2226        R
 ################# Box Drawing
 uni2500        R
 uni2501        R
@@ -140,13 +137,3 @@ uni30EE	       S    80   80    80   80    80   80    80   80    80   80    80   
 uni30F5	       S    80   80    80   80    80   80    80   80    80   80    80   80    80   80
 uni30F6	       S    80   80    80   80    80   80    80   80    80   80    80   80    80   80
 uni30FC	       RF
-################# Half-width and Full-width Forms
-uniFF08	       R
-uniFF09	       R
-uniFF1A	       S     0    0     0    0     0    0     0    0     0    0     0    0     0    0
-uniFF1D	       R
-uniFF3B	       R
-uniFF3D	       R
-uniFF5B	       R
-uniFF5D	       R
-uniFF5E        RF
