@@ -4,8 +4,8 @@ family = "M+"
 author = "M+ FONTS PROJECT"
 os2_vendor = "M+  "
 url = "http://mplus-fonts.osdn.jp"
-year = "2016"
-version = "1.062"
+year = "2017"
+version = "1.063"
 
 license = {
   'Japanese': '''\
