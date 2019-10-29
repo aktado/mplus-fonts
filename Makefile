@@ -45,6 +45,8 @@ all:
 
 ttf: mplus-1p mplus-2p mplus-1m mplus-2m mplus-1c mplus-2c mplus-1mn # mplus-2mn
 
+otf: mplus-1p-otf mplus-2p-otf mplus-1m-otf mplus-2m-otf mplus-1c-otf mplus-2c-otf mplus-1mn-otf # mplus-2mn-otf
+
 mplus-1p: work.d/targets/mplus-1p/Makefile $(KANJI1)
 	@(cd work.d/targets/$@ ; $(MAKE))
 
@@ -74,6 +76,36 @@ mplus-1k: work.d/targets/mplus-1k/Makefile
 
 mplus-2k: work.d/targets/mplus-2k/Makefile
 	@(cd work.d/targets/$@ ; $(MAKE))
+
+mplus-1p-otf: work.d/targets/mplus-1p/Makefile $(KANJI1)
+	@(cd work.d/targets/mplus-1p ; $(MAKE) otf)
+
+mplus-2p-otf: work.d/targets/mplus-2p/Makefile $(KANJI2)
+	@(cd work.d/targets/mplus-2p ; $(MAKE) otf)
+
+mplus-1m-otf: work.d/targets/mplus-1m/Makefile $(KANJI1)
+	@(cd work.d/targets/mplus-1m ; $(MAKE) otf)
+
+mplus-2m-otf: work.d/targets/mplus-2m/Makefile $(KANJI2)
+	@(cd work.d/targets/mplus-2m ; $(MAKE) otf)
+
+mplus-1c-otf: work.d/targets/mplus-1c/Makefile $(KANJI1)
+	@(cd work.d/targets/mplus-1c ; $(MAKE) otf)
+
+mplus-2c-otf: work.d/targets/mplus-2c/Makefile $(KANJI2)
+	@(cd work.d/targets/mplus-2c ; $(MAKE) otf)
+
+mplus-1mn-otf: work.d/targets/mplus-1mn/Makefile $(KANJI1)
+	@(cd work.d/targets/mplus-1mn ; $(MAKE) otf)
+
+mplus-2mn-otf: work.d/targets/mplus-2mn/Makefile $(KANJI2)
+	@(cd work.d/targets/mplus-2mn ; $(MAKE) otf)
+
+mplus-1k-otf: work.d/targets/mplus-1k/Makefile
+	@(cd work.d/targets/mplus-1k ; $(MAKE) otf)
+
+mplus-2k-otf: work.d/targets/mplus-2k/Makefile
+	@(cd work.d/targets/mplus-2k ; $(MAKE) otf)
 
 work.d/targets/mplus-1p/Makefile: $(SCRIPTS)/target-Makefile.1.tmpl dirs
 	sed s/^#Mplus-1P#// $(SCRIPTS)/target-Makefile.1.tmpl > $@
